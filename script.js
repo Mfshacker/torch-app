@@ -37,14 +37,12 @@ yesBtn.addEventListener("click", () => {
     card.innerHTML = `
         <div class="heart">🥰</div>
 
-        <h1>YAY! 💕</h1>
-
         <p class="subtitle">
             I knew you'd say yes! 🎉
         </p>
 
         <p class="hint">
-            Looks like we have a date. 😌
+            text me the date miss. 😌
         </p>
     `;
 });
