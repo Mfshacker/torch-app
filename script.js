@@ -42,7 +42,7 @@ yesBtn.addEventListener("click", () => {
         </p>
 
         <p class="hint">
-            text me the date miss. 😌
+            text me the date miss.😌
         </p>
     `;
 });
