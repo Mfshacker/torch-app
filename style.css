@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle at top left, #ffd6e7, transparent 35%),
+        radial-gradient(circle at bottom right, #d9c7ff, transparent 35%),
+        linear-gradient(135deg, #fff1f7, #f5efff);
+
+    overflow: hidden;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.card {
+    width: min(92vw, 520px);
+
+    padding: 50px 35px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 25px 60px rgba(80, 40, 80, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.heart {
+    font-size: 55px;
+    margin-bottom: 15px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+h1 {
+    font-size: clamp(28px, 6vw, 42px);
+    line-height: 1.15;
+
+    color: #29202a;
+
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #766b75;
+    font-size: 16px;
+
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    min-height: 60px;
+}
+
+button {
+    border: none;
+    border-radius: 14px;
+
+    padding: 14px 28px;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.yes-btn {
+    color: white;
+    background: linear-gradient(135deg, #ff4f91, #ff2f70);
+
+    box-shadow: 0 8px 20px rgba(255, 47, 112, 0.3);
+}
+
+.yes-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+
+    box-shadow:
+        0 12px 28px rgba(255, 47, 112, 0.4);
+}
+
+.no-btn {
+    color: #555;
+    background: #eeeeee;
+
+    position: relative;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.no-btn:hover {
+    background: #e5e5e5;
+}
+
+.hint {
+    margin-top: 30px;
+
+    color: #a096a0;
+    font-size: 13px;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* Phone screens */
+
+@media (max-width: 500px) {
+
+    .card {
+        padding: 40px 22px;
+        border-radius: 24px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 180px;
+    }
+
+}
